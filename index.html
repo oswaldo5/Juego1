@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1 shrink-to-fit-no">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+        <title>Fausto Sandoval Cruz</title>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>  
+        <center><h1>Aprendiendo con frijoles</h1></center>
+            <h2>Quita 1 frijol</h2>
+            <img src="imagen/ojo.png"  width="100" height="86">
+            <br>
+            <center>
+                <div class="siguiente">
+                <button style="display:none" id="btn-1" onclick="redireccionar()"><img src="imagen/Pasted.png"></button>
+                </div>
+                <div class="vasos">
+                <img src="imagen/lleno.png"  width="120" height="120">
+                </div>
+                
+                <div class="frijoles" > 
+                <button onclick="myFunction()" id="myDIV"><img src="imagen/frijol.png"></button>
+                <button onclick="myFunction1()" id="myDIV1"><img src="imagen/frijol.png"></button>
+                <button onclick="myFunction2()" id="myDIV2"><img src="imagen/frijol.png"></button><br>
+                <button onclick="myFunction3()" id="myDIV3"><img src="imagen/frijol.png"></button>
+                <button onclick="myFunction4()" id="myDIV4"><img src="imagen/frijol.png"></button>
+                <button onclick="myFunction5()" id="myDIV5"><img src="imagen/frijol.png"></button>
+                </div>
+                <br>
+                <br>
+                <div id="quedan" style="display: none">
+                  <h2>¿Cuántos frijoles quedan?</h2>
+                  <input type="text" onkeypress="return isNumberKey(event)" maxlength="1" name="caja1" id="caja1">
+                  <input type="text" onkeypress="return isNumberKey(event)" maxlength="1" name="caja2" id="caja2">
+                  <button onclick="verificar()" id="verificar" class="btn btn-warning">Comprobar</button>
+                  <audio src="audio/muybien.mp3" id="demo"></audio>
+                  <br>
+                  <br>
+                  <button onclick="uno()" maxlength="1" value="1" id="uno" class="btn btn-primary">1</button>
+                  <button onclick="dos()" maxlength="1" value="2" id="dos" class="btn btn-secondary">2</button>
+                  <button onclick="tres()" maxlength="1" value="3" id="tres" class="btn btn-success">3</button>
+                  <button onclick="cuatro()" maxlength="1" value="4" id="cuatro" class="btn btn-danger">4</button>
+                  <button onclick="cinco()" maxlength="1" value="5" id="cinco" class="btn btn-warning">5</button>
+                  <button onclick="seis()" maxlength="1" value="6" id="seis" class="btn btn-info">6</button>
+                  <button onclick="siete()" maxlength="1" value="7" id="siete" class="btn btn-light">7</button>
+                  <button onclick="ocho()" maxlength="1" value="8" id="ocho" class="btn btn-dark">8</button>
+                  <button onclick="nueve()" maxlength="1" value="9" id="nueve" class="btn btn-primary">9</button>
+                  <button onclick="cero()" maxlength="1" value="0" id="cero" class="btn btn-secondary">0</button>
+                </div>
+        </center>
+        <script>
+//boton siguiente para redireccionar
+function redireccionar(){
+  window.location="https://oswaldo5.github.io/AprendiendoConFrijoles/";
+  
+}
+
+
+//codificacion verificar
+function verificar(){
+  var x = document.getElementById("caja1");
+  var y = document.getElementById("caja2");
+  if(x.value === "1" && y.value === "5"){
+    btn_1.style.display = 'inline';
+    document.getElementById('demo').play()
+    
+  }else{
+    alert("Respuesta Incorrecta, vuelve a contar");
+    document.getElementById("caja1").value = "";
+    document.getElementById("caja2").value = "";
+  }
+}
+
+//botones con numeros.
+function uno() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+    document.getElementById("caja1").value = document.getElementById('uno').value;
+  }else{
+    document.getElementById("caja2").value = document.getElementById('uno').value;
+  }
+  
+}
+function dos() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('dos').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('dos').value;
+}
+}
+function tres() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('tres').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('tres').value;
+}
+}
+function cuatro() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('cuatro').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('cuatro').value;
+}
+}
+function cinco() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('cinco').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('cinco').value;
+}
+}
+function seis() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('seis').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('seis').value;
+}
+}
+function siete() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('siete').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('siete').value;
+}
+}
+function ocho() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('ocho').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('ocho').value;
+}
+}
+function nueve() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('nueve').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('nueve').value;
+}
+}
+function cero() {
+  var x = document.getElementById("caja1");
+  if(x.value === ""){
+  document.getElementById("caja1").value = document.getElementById('cero').value;
+}else{
+  document.getElementById("caja2").value = document.getElementById('cero').value;
+}
+}
+
+var btn_1 = document.getElementById('btn-1');
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  document.getElementById('myDIV1').disabled=true;
+  document.getElementById('myDIV2').disabled=true;
+  document.getElementById('myDIV3').disabled=true;
+  document.getElementById('myDIV4').disabled=true;
+  document.getElementById('myDIV5').disabled=true;
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("quedan").style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction1() {
+  var x = document.getElementById("myDIV1");
+  document.getElementById('myDIV').disabled=true;
+  document.getElementById('myDIV2').disabled=true;
+  document.getElementById('myDIV3').disabled=true;
+  document.getElementById('myDIV4').disabled=true;
+  document.getElementById('myDIV5').disabled=true;
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction2() {
+  document.getElementById('myDIV1').disabled=true;
+  document.getElementById('myDIV').disabled=true;
+  document.getElementById('myDIV3').disabled=true;
+  document.getElementById('myDIV4').disabled=true;
+  document.getElementById('myDIV5').disabled=true;
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction3() {
+  document.getElementById('myDIV1').disabled=true;
+  document.getElementById('myDIV2').disabled=true;
+  document.getElementById('myDIV').disabled=true;
+  document.getElementById('myDIV4').disabled=true;
+  document.getElementById('myDIV5').disabled=true;
+  var x = document.getElementById("myDIV3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction4() {
+  document.getElementById('myDIV1').disabled=true;
+  document.getElementById('myDIV2').disabled=true;
+  document.getElementById('myDIV3').disabled=true;
+  document.getElementById('myDIV').disabled=true;
+  document.getElementById('myDIV5').disabled=true;
+  var x = document.getElementById("myDIV4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction5() {
+  document.getElementById('myDIV1').disabled=true;
+  document.getElementById('myDIV2').disabled=true;
+  document.getElementById('myDIV3').disabled=true;
+  document.getElementById('myDIV4').disabled=true;
+  document.getElementById('myDIV').disabled=true;
+  var x = document.getElementById("myDIV5");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+            var iContadorFrijoles = 0;
+            const boton = document.querySelectorAll("button");
+
+            boton.forEach(function (item){
+                item.addEventListener("click", function(){
+                    iContadorFrijoles++;
+                    if(boton.querySelectorAll) {
+                       
+            }
+                    if( iContadorFrijoles == 1) {
+                        
+                 //btn_1.style.display = 'inline';
+                 document.getElementById("quedan").style.display = "inline";
+        
+            }
+                });
+            });
+           //recibir solo numeros en caja de texto
+            function isNumberKey(evt)
+          {
+             var charCode = (evt.which) ? evt.which : evt.keyCode;
+             if (charCode != 46 && charCode > 31 
+               && (charCode < 48 || charCode > 57))
+                return false;
+
+             return true;
+          }
+      
+        </script>
+
+    </body>
+
+</html>
